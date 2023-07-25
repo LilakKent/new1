@@ -61,8 +61,8 @@ def function():
             key.write('Проводник', delay=0.1)
         elif pl == 'пока':
             exit()
-        else:
-            print(random.choice(not_understand))
+        #else:
+            #print(random.choice(not_understand))
 
 
 function()
