@@ -1,37 +1,33 @@
 import random
 import pyautogui as pg
 import keyboard as key
-from PyQt5.QtWidgets import *
-import sys
-#import speech_recognition
-#import pyaudio
-#list = ['wow', 'pup']
-#number = ran.random()
-#list1 = ran.choice(list)
-#print(list1)
-
-from bs4 import BeautifulSoup
-import requests
-
-
-
+from pywebio.input import input as pw_input
+from pywebio.output import put_text
+# from PyQt5.QtWidgets import *
+# import sys
+# import speech_recognition
+# import pyaudio
+# from bs4 import BeautifulSoup
+# import requests
 
 greeting = ["Привет!", "Здравствуй!", "Приветствую!", "Привет-привет!"]
-not_understand = ['Не поняла запрос', 'Перефразируй']
 
+not_understand = ['Не поняла запрос', 'Перефразируй']
 
 question = {
     "как дела?": ["Хорошо, спасибо!", "Отлично!", "Не жалуюсь."],
     "что делаешь?": ["Отвечаю на твои вопросы.", "Разговариваю с тобой.", "Программирую."],
     "как тебя зовут?": ["Меня зовут ЖэБа.", "Я ЖэБа.", "Мое имя - ЖэБа."],
-    "что ты умеешь?": ["Я могу отвечать на вопросы и помогать с задачами.", #"Могу общаться на разные темы.",
+    "что ты умеешь?": ["Я могу отвечать на вопросы и помогать с задачами.",  # "Могу общаться на разные темы.",
                        "Попробуй спросить меня о чём-нибудь!"]
 
 }
+
+
 def function():
-    print(random.choice(greeting) + ' Чем могу помочь?')
+    print(random.choice(greeting) + ' ' + 'Чем могу помочь?')
     while True:
-        
+
         cmd = input()
         pl = cmd.lower()
         listofpl = pl.split(' ')
