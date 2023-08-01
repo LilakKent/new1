@@ -1,14 +1,13 @@
 import random
 import pyautogui as pg
 import keyboard as key
-from pywebio.input import input as pw_input
-from pywebio.output import put_text
-# from PyQt5.QtWidgets import *
+from dearpygui import dearpygui as dpg
+# import vosk
+# from pywebio.input import input as pw_input
+# from pywebio.output import put_text
 # import sys
-# import speech_recognition
 # import pyaudio
 # from bs4 import BeautifulSoup
-# import requests
 
 greeting = ["Привет!", "Здравствуй!", "Приветствую!", "Привет-привет!"]
 
