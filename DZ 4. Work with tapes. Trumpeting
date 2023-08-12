@@ -1,0 +1,40 @@
+pet = input('Enter ur favourite pet: ').lower()
+pet_list = []
+name_list = []
+
+cat_emoj = '\U0001F431'
+dog_emoj = '\U0001F436'
+hamster_emoj = '\U0001F439'
+fish_emoj = '\U0001F41F'
+turtle_emoj = '\U0001F422'
+
+for i in pet:
+    if i.isalpha():
+        pet_list.append(i)
+
+animal = "".join(pet_list)
+name = input(f'Enter name of {animal}:').title()
+for i in name:
+    if i.isalpha():
+        name_list.append(i)
+
+is_swim = False
+if animal == 'fish' or animal == 'turtle':
+    is_swim = True
+if is_swim is True:
+    print('u must buy aquarium')
+
+if animal == 'dog':
+    print(f'Oh, I am afraid of dog barking and {name} also', dog_emoj)
+elif animal == 'cat':
+    print(f'{animal} must catch mouses', cat_emoj)
+elif animal == 'hamster':
+    print(f'{animal}s are small', hamster_emoj)
+elif animal == 'fish':
+    print(f'{animal} can`t fry', fish_emoj)
+elif animal == 'turtle':
+    print(f'{animal} have strong shell')
+else:
+    print('I don`t know the type of this animal')
+# (',1,2,3,4,5,6,7,8,9,0,*,!,
+# @,#,$,%,^,&,(,),;,:,.,-,+,_,=,,,`,ё,',# '<,>,/,?,|,')
