@@ -1,0 +1,77 @@
+from decimal import Decimal
+print(f'We have: egg_ostrich, rabbit, perch_sea, pepper, parsley, banana, waffle, bread, pistachio, keffir 25%')
+
+EGG_OF_OSTRICH = 118
+RABBIT = 197
+PERCH_OF_SEA = 123
+PEPPER_RED_SWEET = 26
+PARSLEY = 45
+BANANA = 87
+WAFFLE = 425
+BREAD_WHEAT = 329
+PISTACHIO = 555
+KEFFIR_25 = 51
+
+
+order_all = 0
+egg_ostrich = float(input('how much do u want egg ostrich?'))
+order1 = egg_ostrich/100*EGG_OF_OSTRICH
+print(order1)
+order_all += order1
+print(order_all)
+rabbit = float(input('how much do u want rabbit?'))
+order2 = rabbit/100*RABBIT
+print(order2)
+order_all += order2
+print(order_all)
+perch_sea = float(input('how much do u want sea perch?'))
+order3 = perch_sea/100*PERCH_OF_SEA
+print(order3)
+order_all += order3
+print(order_all)
+pepper = float(input('how much do u want sweet red pepper?'))
+order4 = pepper/100*PEPPER_RED_SWEET
+print(order4)
+order_all += order4
+print(order_all)
+parsley = float(input('how much do u want parsley?'))
+order5 = parsley/100*PARSLEY
+print(order5)
+order_all += order5
+print(order_all)
+banana = float(input('how much do u want banana?'))
+order6 = banana/100*BANANA
+print(order6)
+order_all += order6
+print(order_all)
+waffle = float(input('how much do u want waffle?'))
+order7 = waffle/100*WAFFLE
+print(order7)
+order_all += order7
+print(order_all)
+bread = float(input('how much do u want wheat bread?'))
+order8 = bread/100*BREAD_WHEAT
+print(order8)
+order_all += order8
+print(order_all)
+pistachio = float(input('how much do u want pistachio?'))
+order9 = pistachio/100*PISTACHIO
+print(order9)
+order_all += order9
+print(order_all)
+keffir = float(input('how much do u want keffir?'))
+order10 = keffir/100*KEFFIR_25
+print(order10)
+order_all += order10
+print(order_all)
+
+
+if order_all <= 1000:
+    print('Maybe u will be hungry')
+elif order_all > 1000 and order_all <= 1500:
+    print('This is ur variant')
+else:
+    print('This is too much, u can`t it too much and this is money to trash)')
+#money = order_all*0,32541
+money = Decimal(order_all*0.32541)
+print(money.quantize(Decimal('1.00')), 'grn')
