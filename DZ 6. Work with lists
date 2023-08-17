@@ -1,0 +1,4 @@
+city = "київ,оДеса     Львів.житоМИР,уЖгОрОд.....ХарКІВ       , слАвУтИч".title().replace(',', ' ').replace('.', ' ')\
+    .split()
+for element in city:
+    print(f'Я\U00002764{element}')
