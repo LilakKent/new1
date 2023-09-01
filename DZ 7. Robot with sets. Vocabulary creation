@@ -1,0 +1,27 @@
+#This is first part of HW
+cities = input("Enter the cities where you have been the last 10 years: ").title().split()
+wish = input("Where do you want to go in the next 10 years? ").title().split()
+
+repeats = set(cities).intersection(set(wish))
+
+if repeats:
+    print(f'maybe you really liked these cities: {", ".join(repeats)}')
+else:
+    print(f'maybe you are open to something new?')
+-------------------------------------------------------------------------------------------------------------
+#This is second part of HW
+vehicle_description = {
+    "model": "Camry Elegance+",
+    "type": "sedan",
+    "color": ["white", "black", "silver", "brown", "blue", "red"],
+    "hp": int(175),
+    "length": int(4885),
+    "width": int(1840),
+    "height": int(1445),
+    "wheelbase": int(2825),
+    "front track width": int(1590),
+    "rear track width": int(1610),
+    "overhang ahead": int(975),
+    "overhang behind": int(1085),
+    "front electric motor(max_power)": int(88)
+}
