@@ -1,0 +1,64 @@
+# multiscreen.kv
+BoxLayout:
+    orientation: 'vertical'
+
+    Button:
+        text: 'Калькулятор'
+        on_release: app.switch_screen('calculator')
+
+    Button:
+        text: 'Матричный калькулятор'
+        on_release: app.switch_screen('matrix_calculator')
+
+    ScreenManager:
+        id: screen_manager
+
+        Screen:
+            name: 'calculator'
+
+            BoxLayout:
+                orientation: 'vertical'
+
+                TextInput:
+                    id: input_field
+                    font_size: 32
+                    multiline: False
+                    readonly: True
+
+                GridLayout:
+                    cols: 4
+                    spacing: 10
+
+                    # ... (кнопки для калькулятора)
+
+                Button:
+                    text: 'Назад'
+                    on_release: app.switch_screen('menu')
+
+        Screen:
+            name: 'matrix_calculator'
+
+            BoxLayout:
+                orientation: 'vertical'
+
+                TextInput:
+                    id: matrix_a
+                    hint_text: 'Матрица A'
+                    multiline: False
+
+                TextInput:
+                    id: matrix_b
+                    hint_text: 'Матрица B'
+                    multiline: False
+
+                Button:
+                    text: 'Сложить'
+                    on_release: app.add_matrices()
+
+                Label:
+                    id: result_label
+                    text: ''
+
+                Button:
+                    text: 'Назад'
+                    on_release: app.switch_screen('menu')

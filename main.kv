@@ -1,0 +1,81 @@
+
+BoxLayout:
+    orientation: 'vertical'
+
+    TextInput:
+        id: input_field
+        font_size: 32
+        multiline: False
+        readonly: True
+
+    GridLayout:
+        cols: 5  # Увеличиваем количество колонок для добавления кнопки "j"
+        spacing: 10
+
+        Button:
+            text: '7'
+            on_release: app.update_input('7')
+
+        Button:
+            text: '8'
+            on_release: app.update_input('8')
+
+        Button:
+            text: '9'
+            on_release: app.update_input('9')
+
+        Button:
+            text: '/'
+            on_release: app.update_input('/')
+
+        Button:
+            text: 'j'  # Добавляем кнопку "j"
+            on_release: app.update_input('j')  # Обновляем ввод при нажатии кнопки "j"
+
+        Button:
+            text: '4'
+            on_release: app.update_input('4')
+
+        Button:
+            text: '5'
+            on_release: app.update_input('5')
+
+        Button:
+            text: '6'
+            on_release: app.update_input('6')
+
+        Button:
+            text: '*'
+            on_release: app.update_input('*')
+
+        Button:
+            text: '1'
+            on_release: app.update_input('1')
+
+        Button:
+            text: '2'
+            on_release: app.update_input('2')
+
+        Button:
+            text: '3'
+            on_release: app.update_input('3')
+
+        Button:
+            text: '-'
+            on_release: app.update_input('-')
+
+        Button:
+            text: 'C'
+            on_release: app.clear_input()
+
+        Button:
+            text: '0'
+            on_release: app.update_input('0')
+
+        Button:
+            text: '='
+            on_release: app.calculate_result()
+
+        Button:
+            text: '+'
+            on_release: app.update_input('+')
