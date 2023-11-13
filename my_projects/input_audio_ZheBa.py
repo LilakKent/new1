@@ -2,7 +2,7 @@ import json, pyaudio
 from vosk import Model, KaldiRecognizer
 
 def listen():
-    model_ru = Model('models/vosk_model')
+    model_ru = Model('models/vosk_model') # u must change path to files
     rec = KaldiRecognizer(model_ru, 16000)
     p = pyaudio.PyAudio()
     stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=8000)
